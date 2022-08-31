@@ -1,0 +1,12 @@
+module:
+  hugoVersion:
+    extended: true
+    min: 0.100.0
+
+  mounts:
+    - source: static
+      target: static
+    - source: layouts
+      target: layouts
+    - source: assets
+      target: assets

@@ -1,0 +1,11 @@
+name = "Cossidae"
+license = "MIT"
+licenselink = "https://github.com/cloudcannon/cossidae/blob/main/LICENSE"
+description = "CloudCannon Open-Source Standard Info, Docs, and Education"
+homepage = "https://github.com/cloudcannon/"
+tags = []
+features = []
+min_version = "0.41.0"
+
+[author]
+name = "Liam Bigelow"
