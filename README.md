@@ -2,6 +2,9 @@
 
 See the [cossidae-template](https://github.com/cloudcannon/cossidae-template) repo for a working example.
 
+Current instances:
+- https://pagefind.app
+
 ## Expectations
 
 ### Dependencies
