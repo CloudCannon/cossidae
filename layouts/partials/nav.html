@@ -1,15 +1,34 @@
-<nav class="header">
-    <a href="/">
-        <img class="logo" src="{{ site.Data.meta.logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
-    </a>
-    <ul>
-        <li>
-            <a target="_blank" href="{{ site.Data.meta.github_url }}">
-                {{ with os.Getenv site.Data.meta.version_env_var }}
-                {{ . }}
-                {{ end }}
-                <img class="github" src="/github.svg" alt="{{ site.Data.meta.project_name }} on GitHub">
-            </a>
-        </li>
-    </ul>
-</nav>
+<div class="header" x-data="{ isOpen: false }">
+    <nav class="row"
+         aria-label="Project Navigation">
+        <a href="/">
+            <img class="logo" src="{{ site.Data.meta.logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
+        </a>
+        <ul>
+            <li>
+                <a target="_blank" href="{{ site.Data.meta.github_url }}">
+                    {{ with os.Getenv site.Data.meta.version_env_var }}
+                    {{ . }}
+                    {{ end }}
+                    <img class="github" src="/github.svg" alt="{{ site.Data.meta.project_name }} on GitHub">
+                </a>
+            </li>
+            <li class="ham">
+                <button :aria-expanded="isOpen"
+                        aria-controls="docnav-inner"
+                        @click="isOpen = !isOpen">
+                    <p>{{ site.Data.meta.side_nav_title }} Menu</p>
+                    <span></span>
+               </button>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="docnav-mob"
+        aria-label="{{ site.Data.meta.side_nav_title }} Navigation"
+        :aria-expanded="isOpen">
+        <div id="docnav-inner" class="docnav-inner" :hidden="!isOpen">
+            {{ partial "docnav-list.html" . }}
+        </div>
+    </nav>
+</div>

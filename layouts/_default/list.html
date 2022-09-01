@@ -1,3 +1,5 @@
 {{ define "main" }}
+    {{ partial "conditionals.html" }}
+    <h1>{{ .Params.title }}</h1>
     {{ partial "content.html" .Content }}
 {{ end }}

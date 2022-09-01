@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cloudcannon.com/css/TT-Norms-Pro_400_500_800.css" rel="stylesheet" type="text/css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/meta/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
@@ -38,8 +39,8 @@
 
 <body {{ with .Params.nav_section -}}{{- if not (eq . "Root" ) -}} data-pagefind-filter="section:{{ . }}" {{- end -}}{{-
     end }}>
-    {{ partial "banner.html" }}
-    {{ partial "nav.html" }}
+    {{ partial "banner.html" . }}
+    {{ partial "nav.html" . }}
     <div class="search">
         <script src="/_pagefind/pagefind-ui.js" type="text/javascript"></script>
         <div id="search"></div>
@@ -49,7 +50,6 @@
             {{ partial "docnav.html" . }}
         </aside>
         <main>
-            <h1>{{ .Params.title }}</h1>
             {{ block "main" . }}{{ end }}
         </main>
     </div>
