@@ -68,6 +68,8 @@ Pages can be placed outside of a group (alongside the homepage) by assigning the
 
 ### Shortcodes
 
+#### Diffcode
+
 This theme provides a `diffcode` shortcode that can provide source highlighting alongside diff highlighting. This shortcode should wrap a markdown code block that has a tagged language. For example, from the pagefind docs:
 
 ````markdown
@@ -84,6 +86,40 @@ new PagefindUI({
 ````
 
 The code block will be rendered with the leading `+` removed from each line, and those lines will then be highlighted green to represent a diff.
+
+#### Tree
+
+This theme provides a `tree` shortcode that can help render an ASCII directory tree structure. The given `char` (default `+`) will be replaced with the appropriate box drawing character from the supported set. For example:
+
+```markdown
+{{% tree %}}
+package.json
+_includes/
+++ _layouts/
++  ++ default.liquid
++  ++ page.liquid
+++ file.liquid
+_site/
+++ index.html
+{{% /tree %}}
+```
+
+Will output:
+
+```text
+package.json
+_includes/
+├─ _layouts/
+│  ├─ default.liquid
+│  └─ page.liquid
+└─ file.liquid
+_site/
+└─ index.html
+```
+
+#### Conditional
+
+See [Conditional content](#conditional-content) below.
 
 ### Page links
 
