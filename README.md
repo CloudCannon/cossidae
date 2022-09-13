@@ -89,18 +89,18 @@ The code block will be rendered with the leading `+` removed from each line, and
 
 #### Tree
 
-This theme provides a `tree` shortcode that can help render an ASCII directory tree structure. The given `char` (default `+`) will be replaced with the appropriate box drawing character from the supported set. For example:
+This theme provides a `tree` shortcode that can help render an ASCII directory tree structure. The given `char` (default `>`) will be replaced with the appropriate box drawing character from the supported set. For example:
 
 ```markdown
 {{% tree %}}
 package.json
 _includes/
-++ _layouts/
-+  ++ default.liquid
-+  ++ page.liquid
-++ file.liquid
+>> _layouts/
+>  >> default.liquid
+>  >> page.liquid
+>> file.liquid
 _site/
-++ index.html
+>> index.html
 {{% /tree %}}
 ```
 
