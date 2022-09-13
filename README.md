@@ -117,6 +117,8 @@ _site/
 └─ index.html
 ```
 
+The `tree` shortcode delegates its output to `diffcode` automatically, so lines can be prepended with a `+` character to represent new files.
+
 #### Conditional
 
 See [Conditional content](#conditional-content) below.

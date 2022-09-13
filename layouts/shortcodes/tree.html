@@ -38,6 +38,5 @@
     {{ $outputLines = append (delimit $thisLine "") $outputLines }}
 {{ end }}
 
-```text
-{{- delimit $outputLines "\n" }}
-```
+{{ $codeBlock := (printf "```text%s\n```" (delimit $outputLines "\n")) }}
+{{ partial "diffcode.html" $codeBlock }}
