@@ -18,6 +18,10 @@ $break: "max-width: 800px";
     --primary: #034AD8;
 }
 
+[x-cloak] {
+    display: none !important;
+}
+
 .search {
     width: 100%;
     max-width: 1000px;

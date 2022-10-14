@@ -16,7 +16,7 @@
             <li class="ham">
                 <button :aria-expanded="isOpen"
                         aria-controls="docnav-inner"
-                        @click="isOpen = !isOpen">
+                        @click="isOpen = !isOpen" x-cloak>
                     <p>{{ site.Data.meta.side_nav_title }} Menu</p>
                     <span></span>
                </button>
@@ -27,7 +27,7 @@
     <nav class="docnav-mob"
         aria-label="{{ site.Data.meta.side_nav_title }} Navigation"
         :aria-expanded="isOpen">
-        <div id="docnav-inner" class="docnav-inner" :hidden="!isOpen">
+        <div id="docnav-inner" class="docnav-inner" :hidden="!isOpen" x-cloak>
             {{ partial "docnav-list.html" . }}
         </div>
     </nav>

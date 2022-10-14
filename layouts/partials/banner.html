@@ -1,6 +1,7 @@
 {{ with site.Data.banner }}
 {{ if .show_until }}
 <header class="banner" 
+    x-cloak
     x-data="{
         hidden: true,
         show_until: {{ .show_until }},
