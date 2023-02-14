@@ -17,7 +17,6 @@
 >
 <a href="#conditionals" 
    class="conditionals_label" 
-   x-show="selected === 'all'" 
    x-text="value"
    @click="$dispatch('conditionals-focus')"></a>
 {{ .Inner | .Page.RenderString (dict "display" "block") }}
