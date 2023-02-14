@@ -16,9 +16,9 @@
                 {{- with .default -}}
                     $store.conditionals.default(key, '{{ . }}');
                 {{- end -}}
-                selected = $store.conditionals.selected(key, '{{ . }}');"
+                selected = $store.conditionals.selected(key);"
             x-effect="
-                selected = $store.conditionals.selected(key, '{{ . }}');
+                selected = $store.conditionals.selected(key);
             ">
             <div>
                 <p class="conditionals"
