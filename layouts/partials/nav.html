@@ -7,11 +7,11 @@
         <ul>
             {{ range site.Data.nav.nav_links }}
             <li>
-                <a target="_blank" href="{{ .url }}">
-                    {{ with .version }}
+                <a target="_blank" href="{{ .link_url }}">
+                    {{ with .link_label }}
                     {{ . }}
                     {{ end }}
-                    <img class="nav-links" src="{{ .icon_path }}" alt="{{ site.Data.meta.project_name }} on {{ .title }}">
+                    <img class="nav-links" src="{{ .link_icon_path }}" alt="{{ site.Data.meta.project_name }} on {{ .link_title }}">
                 </a>
             </li>
             {{ end }}
