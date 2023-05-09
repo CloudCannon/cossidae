@@ -53,11 +53,8 @@
             {{ block "main" . }}{{ end }}
         </main>
     </div>
-    <footer>
-        <a href="https://cloudcannon.com" target="_blank">
-            <img class="cloudcannon" src="/cloudcannon.svg" alt="Built by CloudCannon">
-        </a>
-    </footer>
+    {{ partial "footer.html" . }}
+
 
     <script>
         window.addEventListener('DOMContentLoaded', (event) => {

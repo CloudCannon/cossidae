@@ -1,0 +1,12 @@
+<footer>
+    {{ range site.Data.footer.links }}
+        {{ if .title }}
+            <a href="{{ .url }}" target="_blank">{{ .title }}</a>
+        {{ end }} 
+        {{ if .image_path }}
+            <a href="{{ .url }}" target="_blank">
+                <img class="cloudcannon" src="{{ .image_path }}" alt="{{ .alt }}">
+            </a>
+        {{ end }}
+    {{ end }}
+</footer>
