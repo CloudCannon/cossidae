@@ -5,14 +5,16 @@
             <img class="logo" src="{{ site.Data.meta.logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
         </a>
         <ul>
+            {{ range site.Data.meta.external_links }}
             <li>
-                <a target="_blank" href="{{ site.Data.meta.github_url }}">
-                    {{ with os.Getenv site.Data.meta.version_env_var }}
+                <a target="_blank" href="{{ .url }}">
+                    {{ with .version }}
                     {{ . }}
                     {{ end }}
-                    <img class="github" src="/github.svg" alt="{{ site.Data.meta.project_name }} on GitHub">
+                    <img class="external-links" src="{{ .icon_path }}" alt="{{ site.Data.meta.project_name }} on {{ .title }}">
                 </a>
             </li>
+            {{ end }}
             <li class="ham">
                 <button :aria-expanded="isOpen"
                         aria-controls="docnav-inner"
