@@ -119,9 +119,6 @@ _site/
 
 The `tree` shortcode delegates its output to `diffcode` automatically, so lines can be prepended with a `+` character to represent new files.
 
-#### Conditional
-
-See [Conditional content](#conditional-content) below.
 
 ### Page links
 
@@ -138,26 +135,3 @@ All headings on doc pages will have a clickable hash link inserted in the left g
 - `show_until`
   - A timestamp (in milliseconds), after which the banner should not be shown. Use https://currentmillis.com/ to generate a timestamp.
 
-## Conditional content
-
-Conditional content types must be registered in a `data/conditionals.yml` data file of the form:
-
-```yml
-keys:
-  - key: Animal
-    plural: Animals
-    default: Moth
-    values:
-      - Moth
-      - Grub
-```
-
-`default` is optional, and all conditional content will be shown by default if omitted.
-
-Conditional content can be tagged with the `conditional` shortcode:
-
-```markdown
-{{< conditional key="Animal" value="Moth" >}}
-Hello, fellow *moth*
-{{< /conditional >}}
-```
