@@ -6,6 +6,7 @@ $break: "max-width: 800px";
 @import "nav";
 @import "docnav";
 @import "banner";
+@import "dark-styles";
 
 
 :root {
@@ -16,7 +17,21 @@ $break: "max-width: 800px";
     --focus: #000;
     --highlight: #b65a09;
     --primary: #034AD8;
+    --body-bg-color: #fff;
+    --fill-color: pink;
 }
+
+body{
+    background-color: var(--body-bg-color);
+}
+
+// any elements with the class logo-dark will be hidden by :default
+
+.logo-dark {
+    display: none;
+}
+
+
 
 [x-cloak] {
     display: none !important;

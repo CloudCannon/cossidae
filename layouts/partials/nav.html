@@ -2,8 +2,10 @@
     <nav class="row"
          aria-label="Project Navigation">
         <a href="/">
-            <img class="logo" src="{{ site.Data.nav.logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
+            <img class="logo logo-light" src="{{ site.Data.nav.logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
+            <img class="logo logo-dark" src="{{ site.Data.nav.logo_image_dark }}" alt="{{ site.Data.meta.project_name }} Logo">
         </a>
+        
         <ul>
             {{ range site.Data.nav.nav_links }}
             <li>
@@ -15,6 +17,14 @@
                 </a>
             </li>
             {{ end }}
+            <div class="dark-mode-toggle">
+                <button id="js-dark-mode" class="theme-btn">
+                    {{- $svg := "svg/darklightmode.svg" -}}
+                    {{- if $svg }}
+                        {{- partial $svg . -}}
+                    {{- end }}
+                </button>
+            </div>
             <li class="ham">
                 <button :aria-expanded="isOpen"
                         aria-controls="docnav-inner"
