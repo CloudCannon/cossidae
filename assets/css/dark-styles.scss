@@ -9,7 +9,9 @@ body{
         --body-bg-color: #121516;
         --code-element: #b294bb;
         --code-attribute: #8abeb7;
+        --code-bool: #ee6868;
         --code-params: #de935f;
+        --code-values: #b5bd68;
         --background-body: #121516;
         --background: #1d1f21;
         --background-alt: #080808;
@@ -52,6 +54,18 @@ body{
 
             .s {
                 color: var(--code-params);
+            }
+
+            .kc {
+                color: var(--code-bool);
+            }
+
+            .s2 {
+                color: var(--code-values);
+            }
+
+            .mi {
+                color: var(--highlight);
             }
 
            
