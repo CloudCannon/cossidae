@@ -6,6 +6,8 @@
 {{ $inputLines := split .Inner "\n" }}
 {{ $outputLines := slice }}
 
+<h4>test inputlines: {{$inputLines | jsonify }}</h4>
+
 {{ range $lineNumber, $line := $inputLines }}
     {{ $prevLineChars := split (default (index $inputLines (sub $lineNumber 1)) "") "" }}
     {{ $nextLineChars := split (default (index $inputLines (add $lineNumber 1)) "") "" }}
