@@ -6,17 +6,12 @@
 {{ $inputLines := split .Inner "\n" }}
 {{ $outputLines := slice }}
 
-<h4>test inputlines: {{$inputLines | jsonify }}</h4>
 
 {{ range $lineNumber, $line := $inputLines }}
-    <h4>line number: {{$lineNumber}}</h4>
-    <h4>line: {{$line}}</h4>
     {{ $prevLineChars := split (default (index $inputLines (sub $lineNumber 1)) "") "" }}
-    <h4>line prevLineChars: {{$prevLineChars}}</h4>
     {{ $nextLineChars := split (default (index $inputLines (add $lineNumber 1)) "") "" }}
-    <h4>line nextLineChars: {{$nextLineChars}}</h4>
     {{ $currentLineChars := split $line "" }}
-    <h4>line currentLineChars: {{$currentLineChars}}</h4>
+
 
 
     {{ $thisLine := slice }}
@@ -47,5 +42,4 @@
 {{ end }}
 
 {{ $codeBlock := (printf "```text%s\n```" (delimit $outputLines "\n")) }}
-<h4>test: {{ $codeBlock | jsonify }}</h4>
 {{ partial "diffcode.html" $codeBlock }}
