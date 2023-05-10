@@ -32,11 +32,11 @@ body{
         --variable: #c85f5f;
 
         // pagefind
-        --pagefind-ui-primary: #eeeeee;
-        --pagefind-ui-text: #eeeeee;
-        --pagefind-ui-background: #152028;
-        --pagefind-ui-border: #152028;
-        --pagefind-ui-tag: #152028;
+        --pagefind-ui-primary: var(--text);
+        --pagefind-ui-text: var(--text);
+        --pagefind-ui-background: var(--background);
+        --pagefind-ui-border: var(--background);
+        --pagefind-ui-tag: var(--background);
 
       
         h1, h2, h3, h4, h5, h6{
