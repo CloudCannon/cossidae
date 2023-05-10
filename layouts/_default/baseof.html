@@ -50,6 +50,15 @@
             {{ block "main" . }}{{ end }}
         </main>
     </div>
+    <div class="dark-mode-toggle">
+        <button id="js-dark-mode" class="n-button">
+            {{- $svg := "/svg/darklightmode.svg" -}}
+            {{- if $svg }}
+                {{- partial $svg . -}}
+            {{- end }}
+            <span id="js-mode-label">Dark Mode</span>
+        </button>
+    </div>
     {{ partial "footer.html" . }}
 
 
