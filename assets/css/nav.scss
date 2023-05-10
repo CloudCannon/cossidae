@@ -21,6 +21,7 @@
 
         .nav-links {
             height: 24px;
+            filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(21deg) brightness(97%) contrast(103%);
         }
 
         ul {
@@ -38,6 +39,7 @@
             align-items: center;
             gap: 10px;
             font-size: 0.9em;
+
         }
 
         .theme-btn {

@@ -17,7 +17,7 @@ body{
         --text-main: #98a3ad;
         --text-bright: #fff;
         --text-muted: #c8c8c8;
-        // --links: #ff4d4d;
+        --links: #de935f;
         --focus: #ff4d4d;
         --border: #ffffff;
         --code: #fff;
@@ -57,18 +57,21 @@ body{
            
         }
 
-        .logo-dark {
-            display: block;
-        }
-    
-        .logo-light {
-            display: none;
-        }
 
         [data-add]>span {
             background-color: rgba(0, 53, 6, 0.825);
         }
+
+        [data-remove]>span {
+            background-color: rgba(53, 0, 0, 0.825);
+        }
+
+        .header>.row .logo , .header>.row .nav-links {
+            filter: invert(99%) sepia(1%) saturate(1715%) hue-rotate(198deg) brightness(121%) contrast(100%);
+        }
+    
     }
 
+    
     
 }
