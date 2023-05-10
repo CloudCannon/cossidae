@@ -11,10 +11,18 @@
 
         .logo {
             height: 32px;
-
         }
 
       
+        .logo-heading {
+            font-size: 42px;
+            color: var(--text);
+            padding: 0;
+            margin: 0;
+            font-weight: 700;
+            
+
+        }
 
    
           
@@ -39,7 +47,11 @@
             align-items: center;
             gap: 10px;
             font-size: 0.9em;
+            
+        }
 
+        .logo-link {
+            text-decoration: none;
         }
 
         .theme-btn {

@@ -25,13 +25,6 @@ body{
     background-color: var(--body-bg-color);
 }
 
-// any elements with the class logo-dark will be hidden by :default
-
-.logo-dark {
-    display: none;
-}
-
-
 
 [x-cloak] {
     display: none !important;
