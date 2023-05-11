@@ -86,7 +86,14 @@ body{
             background-color: rgba(53, 0, 0, 0.825);
         }
 
-        // .header>.row .logo , 
+        .header>.row .logo-dark {
+            display: block;
+        }
+
+        .header>.row .logo-light {
+            display: none;
+        }
+         
         .header>.row .nav-links {
          
             filter: invert(99%) sepia(1%) saturate(1715%) hue-rotate(198deg) brightness(121%) contrast(100%);

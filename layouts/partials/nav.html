@@ -2,16 +2,18 @@
     <nav class="row"
          aria-label="Project Navigation">
         <a class="logo-link" href="/">
-            {{ range site.Data.nav.product_logo }}
-                {{ if .logo_image  }}
-                    <img class="logo logo-light" src="{{ .logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
+          
+            {{ $logo := site.Data.nav.logo }}
+                {{ if $logo.logo_image  }}
+                    <img class="logo logo-light" src="{{ $logo.logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
+                    {{ if $logo.logo_image_dark }}
+                        <img class="logo logo-dark" src="{{ $logo.logo_image_dark }}" alt="{{ site.Data.meta.project_name }} Logo">
+                    {{ end }}
                 {{ else }}
-                    <span class="logo-heading">{{ .logo_heading }}</span>
+                    <span class="logo-heading">{{if $logo.logo_heading }}{{ $logo.logo_heading }} {{ else }} logo {{end}}</span>
                 {{ end }}
-            {{ end }}
+          
         </a>
-        
-
         
         <ul>
             {{ range site.Data.nav.nav_links }}
