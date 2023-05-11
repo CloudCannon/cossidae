@@ -18,7 +18,7 @@
         <ul>
             {{ range site.Data.nav.nav_links }}
             <li>
-                <a target="_blank" href="{{ .link_url }}">
+                <a {{if .link_icon_path }} target="_blank" {{else}} target="_self" {{end}} href="{{ .link_url }}">
                     {{ with .link_label }}
                         {{ . }}
                     {{ end }}
