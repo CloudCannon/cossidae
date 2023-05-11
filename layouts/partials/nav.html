@@ -2,10 +2,12 @@
     <nav class="row"
          aria-label="Project Navigation">
         <a class="logo-link" href="/">
-            {{ if site.Data.nav.logo_image }}
-            <img class="logo logo-light" src="{{ site.Data.nav.logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
-            {{ else }}
-            <span class="logo-heading">{{ site.Data.nav.logo_heading }}</span>
+            {{ range site.Data.nav.product_logo }}
+                {{ if .logo_image  }}
+                    <img class="logo logo-light" src="{{ .logo_image }}" alt="{{ site.Data.meta.project_name }} Logo">
+                {{ else }}
+                    <span class="logo-heading">{{ .logo_heading }}</span>
+                {{ end }}
             {{ end }}
         </a>
         
