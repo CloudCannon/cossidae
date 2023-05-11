@@ -2,7 +2,7 @@ body{
 
     &.dark{
         --text: #DBDBDB;
-        --flip-text: #000;
+        --flip-text: var(--text);
         --focus: #fff;
         --highlight: #de935f;
         --primary: #034AD8;
