@@ -20,9 +20,11 @@
             <li>
                 <a target="_blank" href="{{ .link_url }}">
                     {{ with .link_label }}
-                    {{ . }}
+                        {{ . }}
                     {{ end }}
-                    <img class="nav-links" src="{{ .link_icon_path }}" alt="{{ site.Data.meta.project_name }} on {{ .link_title }}">
+                    {{ if .link_icon_path}}
+                        <img class="nav-links" src="{{ .link_icon_path }}" alt="{{ site.Data.meta.project_name }} on {{ .link_title }}">
+                    {{ end }}
                 </a>
             </li>
             {{ end }}
