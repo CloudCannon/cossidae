@@ -1,5 +1,5 @@
 <footer>
-    {{ range site.Data.footer.footer_links.footer_link }}
+    {{ range site.Data.footer.footer_links }}
         {{ if .link_title }}
             <a href="{{ .url_path }}" target="_self">{{ .link_title }}</a>
         {{ end }} 
