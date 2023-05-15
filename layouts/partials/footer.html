@@ -1,4 +1,5 @@
 <footer>
+    <span class="editor-link"><a href="cloudcannon:collections/data/footer.yml" data-cms-bind-style="sidebar" class="btn"><strong>&#9998;</strong>Edit Footer</a></span>
     {{ range site.Data.footer.footer_links }}
         {{ if .link_title }}
             <a href="{{ .url_path }}" target="_self">{{ .link_title }}</a>
