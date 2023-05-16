@@ -33,7 +33,7 @@
                
             
             <div class="dark-mode-toggle">
-                <button id="js-dark-mode" class="theme-btn" aria-label="dark mode toggle">
+                <button id="js-dark-mode" class="theme-btn" aria-label="dark mode toggle" @click="toggleMode()">
                     {{- $svg := "svg/darklightmode.svg" -}}
                     {{- if $svg }}
                         {{- partial $svg . -}}

@@ -47,7 +47,7 @@
 </head>
 
 <body {{ with .Params.nav_section -}}{{- if not (eq . "Root" ) -}} data-pagefind-filter="section:{{ . }}" {{- end -}}{{-
-    end }}>
+    end }} x-data="darkModeToggle()" x-init="init()" x-bind:class="{ dark: mode === 'dark', light: mode === 'light' }"  >
     {{ partial "banner.html" . }}
     {{ partial "nav.html" . }}
     <div class="search">
