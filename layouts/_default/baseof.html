@@ -32,6 +32,18 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 
     <title>{{.Params.title}} | {{ site.Data.meta.project_name }}</title>
+
+    <style>
+        {{ range $theme, $tokens := site.Data.theme.colors }}
+          body.{{$theme}} {
+            {{ range $token, $color := $tokens }}
+            --{{$token}}: {{$color}};
+            {{ end }}
+          }
+        {{ end }}
+    </style>
+
+
 </head>
 
 <body {{ with .Params.nav_section -}}{{- if not (eq . "Root" ) -}} data-pagefind-filter="section:{{ . }}" {{- end -}}{{-
