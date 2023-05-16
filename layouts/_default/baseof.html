@@ -19,7 +19,7 @@
     <meta content="en_US" property="og:locale">
     <meta content="{{.Summary | plainify | htmlUnescape}}" name="description">
     <meta content="{{.Summary | plainify | htmlUnescape}}" property="og:description">
-    <link rel="canonical" href="{{ .Permalink }}" >
+    <link rel="canonical" href="{{ .Permalink | absURL }}" >
     <meta content="{{.Permalink | absURL}}" property="og:url">
     <meta content="{{ site.Data.meta.project_name }}" property="og:site_name">
     <meta data-pagefind-meta="image[content]" content="{{ site.Data.meta.default_og_image | absURL}}" property="og:image">
