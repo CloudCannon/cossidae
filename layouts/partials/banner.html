@@ -4,7 +4,7 @@
     x-cloak
     x-data="{
         hidden: true,
-        show_until: {{ .show_until }},
+        show_until: Math.floor(new Date('{{ .show_until }}').getTime() / 1000),
         hide_if: 'banner_{{ .id }}',
     }"
     x-show="!hidden"
